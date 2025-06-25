@@ -1,0 +1,3 @@
+Add a button to download the meme with top and botton text span added on the image
+Add an input so that user can upload image instead of Api meme
+Add and option to change the color of text on the meme

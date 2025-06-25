@@ -1,0 +1,24 @@
+  const [topText, setTopText] = React.useState("");
+  
+  function topChange(e) {
+    setTopText(e.target.value);
+  }
+  const [bottomText, setBottomText] = React.useState("");
+
+  function bottomChange(e) {
+    setBottomText(e.target.value);
+  }
+
+  const [image, setImage] = React.useState("");
+
+  function imageChange(e) {
+    setImage(e.target.value);
+  }
+
+  const memeData = {
+    top: { topText },
+    bottom: { bottomText },
+    image: { image },
+  };
+
+  console.log(memeData);
