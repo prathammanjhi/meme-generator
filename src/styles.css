@@ -5,6 +5,9 @@
   padding: 0;
   font-family: "Barlow", sans-serif;
 }
+body {
+  padding-bottom: 3em;
+}
 .App {
   font-family: sans-serif;
   text-align: center;
@@ -108,6 +111,48 @@ input {
     font-weight: 700;
     border-radius: 5px;
   }
+
+  .meme_color {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem; /* space between button and color picker */
+    margin-top: 1rem;
+  }
+
+  .textColor {
+    width: 40%;
+  }
+
+  .textColor input[type="color"] {
+    width: 70px;
+    height: 20px;
+    /* border-radius: 50%; */
+    padding: 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.3);
+
+    background: none;
+  }
+  .textColor input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+    border: none;
+  }
+
+  .textColor input[type="color"]::-webkit-color-swatch {
+    border: none;
+    /* border-radius: 50%; */
+  }
+  .textColor input[type="color"]:hover {
+    box-shadow: 0 0 10px 2px rgba(53, 4, 251, 0.792);
+  }
+
   .gen-btn {
     width: 360px;
     align-self: center;
@@ -115,11 +160,13 @@ input {
     justify-self: center;
     align-self: center;
     margin-left: 5px;
+    margin-right: 5px;
     padding: 5px;
     color: white;
     background-color: rgb(255, 0, 0);
     border: none;
     border-radius: 10px;
+    height: 3em;
   }
   .meme {
     position: relative; /* Very important! */
@@ -131,7 +178,7 @@ input {
   .memeimg {
     width: 100%;
     display: block;
-    border-radius: 8px; /* optional */
+    /* border-radius: 8px; optional */
   }
 
   .meme .top,
@@ -154,5 +201,100 @@ input {
 
   .meme .bottom {
     bottom: 10px; /* place near bottom of image */
+  }
+  .upload-download {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+  }
+
+  .upload-btn {
+    padding: 6px 10px;
+    border: 2px solid #7f027f;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #7f027f;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .upload-btn:hover {
+    background-color: #f8e5ff;
+  }
+
+  .download-btn {
+    padding: 6px 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #000000;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    height: 3em;
+  }
+
+  .download-btn:hover {
+    background-color: #ff0000;
+  }
+  .upload-btn {
+    display: none;
+  }
+
+  .custom-upload-label {
+    padding: 10px 18px;
+    background-color: #6200ea;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .upload-alert {
+    margin-top: 1rem;
+    padding: 10px 15px;
+    background-color: #dff0d8;
+    color: #3c763d;
+    font-weight: bold;
+    border: 1px solid #d0e9c6;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    animation: fadeInOut 1s ease-in-out forwards;
+    transition: opacity 0.3s ease;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .close-btn {
+    background: none;
+    border: none;
+    color: #3c763d;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0 5px;
+  }
+
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    10% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
   }
 }
