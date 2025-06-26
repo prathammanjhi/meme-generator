@@ -1,0 +1,36 @@
+{
+  "short_name": "MemeGen",
+  "name": "Meme Generator App",
+  "icons": [
+  {
+    "src": "logo192.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  },
+  {
+    "src": "logo512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }
+]
+,
+"screenshots": [
+  {
+    "src": "screenshot-wide.png",
+    "sizes": "800x600",
+    "type": "image/png",
+    "form_factor": "wide"
+  },
+  {
+    "src": "screenshot-default.png",
+    "sizes": "800x600",
+    "type": "image/png"
+  }
+]
+
+,
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#7f027f",
+  "background_color": "#ffffff"
+}
